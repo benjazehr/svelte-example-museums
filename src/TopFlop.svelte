@@ -39,6 +39,9 @@
     display: inline-block;
     float: left;
   }
+  :global(html[dir="rtl"] .bar) {
+    float: right;
+  }
   .bar > span {
     display: inline-block;
     padding: 4px 6px;
@@ -48,6 +51,9 @@
   }
   .bar-m {
     text-align: right;
+  }
+  :global(html[dir="rtl"] .bar-m) {
+    text-align: left;
   }
   hr {
     padding: 0 !important;

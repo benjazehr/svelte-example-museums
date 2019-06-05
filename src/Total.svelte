@@ -101,6 +101,7 @@
 <h2>{t('total_title')}</h2>
 <p>
    {t('total_description')}
+  <br />
   <span class="rect-label">
     <span class="rect-f" style="background-color: {colors.f};" />
      {t('f')}
@@ -117,12 +118,12 @@
       <div
         class="bar bar-f"
         style="width: {group.f}%; background-color: {colors.f};">
-        <span>{group.f}%</span>
+        <span>{group.f > 7 ? `${group.f}%` : ' '}</span>
       </div>
       <div
         class="bar bar-m"
         style="width: {group.m}%; background-color: {colors.m};">
-        <span>{group.m}%</span>
+        <span>{group.m > 7 ? `${group.m}%` : ' '}</span>
       </div>
     </div>
   </div>

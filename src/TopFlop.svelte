@@ -20,6 +20,10 @@
     line-height: 1;
     font-size: 0.9375em;
     letter-spacing: 0.01em;
+    direction: ltr;
+  }
+  :global(html[dir="rtl"] .name) {
+    text-align: right;
   }
   @media only screen and (min-width: 641px) {
     .row {
@@ -69,21 +73,21 @@
 {#each data as museum, index}
   <div class="row">
     <div class="name">
-      <span>{museum.name}</span>
-      {#if !museum.name.match(` ${museum.city}`)}
-        <span>({museum.city})</span>
+      <span>{t(museum.name)}</span>
+      {#if !t(museum.name).match(` ${t(museum.city)}`)}
+        <span>({t(museum.city)})</span>
       {/if}
     </div>
     <div class="bar-chart">
       <div
         class="bar bar-f"
         style="width: {museum.f}%; background-color: {colors.f};">
-        <span>{museum.f}%</span>
+        <span>{museum.m > 7 ? `${museum.m}%` : ' '}</span>
       </div>
       <div
         class="bar bar-m"
         style="width: {museum.m}%; background-color: {colors.m};">
-        <span>{museum.m}%</span>
+        <span>{museum.m > 7 ? `${museum.m}%` : ' '}</span>
       </div>
     </div>
   </div>

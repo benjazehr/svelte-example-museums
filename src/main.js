@@ -11,7 +11,10 @@ import { tsvParse } from 'd3-dsv';
  */
 const getLang = () => {
 	if (typeof window === 'undefined' || !window.hasOwnProperty('location')) return;
-	const matches = window.location.href.match(/^https:\/\/(?:www\.)?swissinfo\.ch\/([a-z]{3})/);
+	let matches = window.location.href.match(/^https:\/\/(?:www\.)?swissinfo\.ch\/([a-z]{3})/);
+	if (matches && matches.length > 1) return matches[1];
+	// or is it in the cms?
+	matches = window.location.href.match(/^https:\/\/studio\.silium.ch\/blueprint\/servlet\/page\/([a-z]{3})/);
 	if (matches && matches.length > 1) return matches[1];
 	// or maybe rts?
 	if (window.location.href.match(/^https:\/\/(?:www\.)?rts\.ch/)) {

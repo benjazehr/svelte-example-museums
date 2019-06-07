@@ -1,3 +1,4 @@
+import 'es6-shim';
 import Total from './Total.svelte';
 import TopFlop from './TopFlop.svelte';
 import BigMuseums from './BigMuseums.svelte';
@@ -10,7 +11,7 @@ import { tsvParse } from 'd3-dsv';
  * Function that determines the language of the swissinfo site the app runs in
  */
 const getLang = () => {
-	if (typeof window === 'undefined' || !window.hasOwnProperty('location')) return;
+	if (typeof window === 'undefined' || !window.location) return;
 	let matches = window.location.href.match(/^https:\/\/(?:www\.)?swissinfo\.ch\/([a-z]{3})/);
 	if (matches && matches.length > 1) return matches[1];
 	// or is it in the cms?

@@ -36,6 +36,7 @@
   .rect-label {
     display: inline-block;
     margin-right: 10px;
+    margin-top: 7px;
   }
   .rect-m,
   .rect-f {

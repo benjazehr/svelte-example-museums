@@ -20,10 +20,6 @@
     line-height: 1;
     font-size: 0.9375em;
     letter-spacing: 0.01em;
-    direction: ltr;
-  }
-  :global(html[dir="rtl"] .name) {
-    text-align: right;
   }
   @media only screen and (min-width: 641px) {
     .row {
@@ -75,7 +71,7 @@
     <div class="name">
       <span>{t(museum.name)}</span>
       {#if !t(museum.name).match(` ${t(museum.city)}`)}
-        <span>({t(museum.city)})</span>
+        <span class="city">{` (${t(museum.city)})`}</span>
       {/if}
     </div>
     <div class="bar-chart">

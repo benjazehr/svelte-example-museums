@@ -1,4 +1,3 @@
-import 'es6-shim';
 import Total from './Total.svelte';
 import TopFlop from './TopFlop.svelte';
 import BigMuseums from './BigMuseums.svelte';

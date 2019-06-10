@@ -1,68 +1,20 @@
-*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+### svelte-example-museums
 
----
+How to make a svelte app compatible with IE11.
 
-# svelte app
+Technologies used:
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+- rollup
+- babel
+- core-js
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+To see how it's done, read [this blogpost](https://blog.az.sg/posts/making-a-svelte-app-compatible-with-internet-explorer-11) and check the final [rollup config](https://github.com/angelozehr/svelte-example-museums/blob/master/rollup.config.js).
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+To se an alternate version using buble, [go back one commit](https://github.com/angelozehr/svelte-example-museums/blob/51677c6bd6d8ab24fab76097421db709883018d6/rollup.config.js).
 
 
-## Get started
+#### Original project
 
-Install the dependencies...
+This is a copy of the official [Svelte Template](https://github.com/sveltejs/template).
 
-```bash
-cd svelte-app
-npm install
-```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-now
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```
+PS: As you might see, I did not find an elegant way to share styles across multiple svelte components. If you know a way, let me know :)

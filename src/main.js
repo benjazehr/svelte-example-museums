@@ -1,3 +1,4 @@
+import '@webcomponents/webcomponentsjs/webcomponents-bundle.js'; // @webcomponents bundle needs to be imported, maybe in index.html
 import Total from './Total.svelte';
 import TopFlop from './TopFlop.svelte';
 import BigMuseums from './BigMuseums.svelte';
